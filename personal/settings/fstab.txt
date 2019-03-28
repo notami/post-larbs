@@ -1,0 +1,20 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a device; this may
+# be used with UUID= as a more robust way to name devices that works even if
+# disks are added and removed. See fstab(5).
+#
+# <file system>             <mount point>  <type>  <options>  <dump>  <pass>
+UUID=98fae81b-69cd-4bdf-b9ca-bf63f69d0ec1 /              ext4    defaults,noatime,discard 0 1
+UUID=6e0f6a64-a87a-4d72-a3e6-d1d923d86245 /home          ext4    defaults,noatime,discard 0 2
+UUID=4c86e0a2-5e50-48e7-b3de-cb79be417f30 swap           swap    defaults,noatime,discard 0 2
+UUID=3f70b1c8-9954-4e6a-915f-3320365d2e89 swap           swap    defaults,noatime 0 2
+UUID=FC864E0E864DCA3A                     /mnt/DataL     ntfs-3g permissions,locale=en_US.utf8 0 2
+tmpfs                                     /tmp           tmpfs   defaults,noatime,mode=1777 0 0
+freenas.local:/mnt/vol2/Data /mnt/Data nfs rw  0 0
+freenas.local:/mnt/vol2/Video /mnt/Video nfs rw  0 0
+freenas.local:/mnt/vol2/Audio /mnt/Audio nfs rw   0 0
+freenas.local:/mnt/vol2/Images /mnt/Images nfs rw   0 0
+freenas.local:/mnt/vol3/Exe /mnt/Exe nfs rw   0 0
+freenas.local:/mnt/vol1/jails/fnweb-local/usr/local/www /mnt/www nfs rw   0 0
+freenas.local:/mnt/vol4/ /mnt/Archive/ nfs rw   0 0

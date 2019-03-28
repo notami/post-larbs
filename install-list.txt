@@ -1,0 +1,30 @@
+## Post Larbs Install
+
+## Pacman
+`abcde audacity calibre python-eyed3 figlet glances intel-ucode keepassxc kodi lsof mps-youtube ncdu neofetch nmap picard rofi surfraw sxiv termite vlc zsh`
+
+_Update grub after install of intel-ucode!_
+
+## AUR
+
+```
+boxes
+cheat-git
+inxi
+toilet
+timeshift
+tor-browser-en
+sublime-text-dev
+ttf-wps-fonts
+wps-office
+```
+## CURL
+
+_Oh-My-Zsh_
+
+`sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+
+_ZPlug_
+
+`curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh`
+

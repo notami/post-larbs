@@ -1,0 +1,71 @@
+/*https://gist.github.com/dannycolin/b56788d781499f625439e606fe099419*/
+@namespace "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* BEGIN Compact theme variables */
+[uidensity="compact"]:root {
+    --tab-line-color: transparent !important;
+    --tab-min-height: 18px !important;
+    --nav-min-height: 18px !important;
+    --newtab-margin: -3px 0 -3px -3px !important;
+}
+/* END Compact theme variables */
+    
+/* BEGIN Tabbar */
+.tabbrowser-tab {
+    max-height: var(--tab-min-height) !important;
+}
+  
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+    border: none !important;
+}
+
+.tabs-newtab-button{
+    margin: var(--newtab-margin) !important;
+}
+/* END Tabbar */
+    
+/* BEGIN Navbar */
+#navigator-toolbox {
+    /* Move navbar to bottom */
+    display: contents !important;
+}
+#nav-bar {
+    /* Move navbar to bottom */
+    -moz-box-ordinal-group: 2 !important;
+      
+    max-height: var(--nav-min-height) !important;
+}
+   
+.identity-box,  
+#urlbar {
+    border: none !important;
+    font-family: monospace !important;
+    font-size: 11px !important;
+    margin-top: -3px !important;
+    margin-bottom: -3px !important;
+    max-height: var(--nav-min-height) !important;
+}
+    
+.toolbarbutton-1 {
+    margin: -5px 0 -5px -5px !important;    
+}
+/* END Navbar*/
+  
+/* BEGIN Hide elements
+ *  
+ *  - statuspanel[type="overLink"]  Hide URL notifications
+ *  - #back-button                  Navbar previous page button
+ *  - #forward-button               Navbar next page button
+ *  - #PanelUI-menu-button          Hamburger menu
+ *  - .tab-close-button             Tabbar tab close button
+ *  - .tabs-newtab-button           Tabbar new tab button
+ */
+statuspanel[type="overLink"],
+#back-button,
+#forward-button,
+#PanelUI-menu-button,
+.tab-close-button,
+.tabs-newtab-button {
+    display: none !important;
+}
+/* END Hide elements*/
